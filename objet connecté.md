@@ -89,7 +89,7 @@ Si je devais résumer brièvement :
 - Gestion réduite des modifications sur plusieurs applications.
 - Simplification du développement : tout est disponible au même endroit et il est beaucoup plus facile de naviguer entre les zones.
 
-Turborepo:
+**Turborepo:**
 
 Turborepo est un système de construction intelligent optimisé pour les bases de code JavaScript et TypeScript.
 
@@ -114,3 +114,44 @@ Les caches de build sont généralement générés et contrôlés sur votre ordi
 Avec la mise en cache à distance, les builds peuvent atteindre des temps de build étonnamment rapides en fournissant un moyen de partager les calculs compilés et les artefacts de code dans Vercel. Ces artefacts peuvent être une sortie de journal, une sortie de build, des blobs de données, etc. La mise en cache à distance identifie tous les artefacts nécessaires déjà générés dans le même code PR et les recycle sur différentes machines. Ce recyclage ou réutilisation peut se faire lors du processus de création Vercel ou via un CI/CD externe.
 
 Turborepo peut rendre votre pipeline 10 fois plus rapide. Il offre une immense valeur prête à l'emploi avec un pipeline de compilation déclarative, d'excellentes options de débogage/profilage et une excellente documentation.
+
+**Lerna:**
+
+Lerna est un système de construction rapide et moderne permettant de gérer et de publier plusieurs packages JavaScript/TypeScript à partir du même repository.
+
+**Rush:**
+
+**Test**
+
+TDD comprend 4 phases : analyse, conception, développement et tests. En d’autres termes, cela signifie comprendre le domaine du problème et l’analyser, concevoir une application pour résoudre le problème, la développer et la tester. 
+Pour être clair, TDD ne signifie pas seulement créer des tests unitaires, c'est un terme qui fait référence à l'ensemble du processus de développement.
+
+Il est nécessaire de rédiger les textes avant de mettre en œuvre la fonction. Si la fonction existe avant l'écriture du test, nous ne parlons pas de TDD, il s'agit simplement d'un test.
+
+Le processus n'est pas compliqué, il vous suffit de suivre quelques étapes et de les répéter lors de l'écriture du code :
+
+- Écrivez un test unitaire voué à l'échec.
+- Exécutez le test.
+- Améliorer le test.
+
+Le TDD (Test Driven Development) apporte certainement des avantages considérables à une équipe de développement :
+
+- Travail d'équipe : 
+Les développeurs ayant une ancienneté plus avancée auront une plus grande confiance dans le code produit par les juniors, car ils sauront que le code sera au moins validé par un processus contrôlé.
+- Évitez la surconception : 
+TDD vous permet d'avoir une vision pièce par pièce du projet et vous aidera à éviter d'utiliser des structures ou des motifs inutiles.
+- Sentiment du travail bien fait : 
+A chaque commit de votre projet, vous aurez le sentiment que votre code est bien fait car les tests seront toujours valides et vous n'aurez aucun doute sur avoir affecté certaines autres fonctionnalités.
+- Augmenter la qualité du logiciel : 
+Dans chaque phase de refactoring, vous vous concentrerez sur la rendre votre code plus efficace et maintenable, en vérifiant que l'ensemble du projet fonctionne correctement après vos modifications.
+
+Le BDD est une approche de test dérivée de la méthodologie Test-Driven Development (TDD). Dans BDD, les tests décrivent le comportement du système. Dans la plupart des cas, l’ approche Given-When-Then est utilisée pour écrire des cas de test.
+
+Le BDD a de nombreux avantages :
+
+- Encourager la collaboration entre les rôles pour construire une compréhension partagée du problème à résoudre.
+- Augmenter la rétroaction et le flux de valeur.
+- Produire une documentation système qui est automatiquement vérifiée par rapport au comportement du système.
+
+Le BDD est comme un ensemble de plug-ins pour le processus existant. Il rendra l’équipe plus à même de tenir les promesses de l’agilité : des versions rapides et fiables de logiciels fonctionnels qui répondent aux besoins évolutifs de l’organisation, nécessitant des efforts de maintenance et de la discipline.
+
