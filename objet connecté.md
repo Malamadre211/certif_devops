@@ -115,16 +115,38 @@ Avec la mise en cache à distance, les builds peuvent atteindre des temps de bui
 
 Turborepo peut rendre votre pipeline 10 fois plus rapide. Il offre une immense valeur prête à l'emploi avec un pipeline de compilation déclarative, d'excellentes options de débogage/profilage et une excellente documentation.
 
+La mise en cache automatique de Turborepo rend la configuration plus simple qu'avec Lerna, mais pour les monorepos existants, cela peut être un peu plus compliqué et la configuration du pipeline est toujours inutilement complexe.
+
 **Lerna:**
 
 Lerna est un système de construction rapide et moderne permettant de gérer et de publier plusieurs packages JavaScript/TypeScript à partir du même repository.
 
+L'expérience de configuration n'est pas terrible, mais je pense qu'elle pourrait être meilleure, surtout si vous modifiez manuellement la configuration du pipeline plutôt que d'utiliser l'assistant.
+
 **Rush:**
+
+La configuration de Rush est nettement plus complexe que celle de Lerna ou de Turborepo dans presque tous les sens.
+
+**Configurer:**
+
+Lerna et Turborepo sont assez proches en termes de facilité de configuration, mais je pense que Turborepo est encore meilleur à cet égard car la mise en cache est activée par défaut. Quant à Rush, il est loin derrière les deux en configuration. J'éviterais Rush si je devais monter beaucoup de projets avec.
+
+**Performance:**
+
+Dans l'ensemble, Lerna associé à Nx est le plus rapide parmi ceux-ci, suivi de Turborepo puis de Rush. Bien qu'ils devraient tous être suffisamment rapides pour la plupart des projets, si vous travaillez avec un très grand monorepo, Lerna peut être un peu plus rapide. Turborepo et Rush devraient fonctionner à peu près de la même manière, mais Turborepo offre des performances complètes sans avoir à activer des fonctionnalités expérimentales (le cache de build de Rush est expérimental).
+
+**Caractéristiques:**
+
+L'une des fonctionnalités les plus intéressantes de Lerna est la possibilité de répartir l'exécution des tâches, ce qui signifie que vous pouvez répartir les charges de travail de construction sur plusieurs machines, accélérant ainsi le processus. Malheureusement, pour ce faire, vous devez utiliser Nx Cloud, un service créé par Nrwl pour la mise en cache à distance et la distribution des tâches. Nx Cloud est gratuit pour les projets open source, mais peut entraîner des frais si votre projet est fermé.
+
+Turborepo offre une intégration gratuite avec les serveurs Vercel, et mieux encore, si vous craignez de placer votre code sur des serveurs que vous ne contrôlez pas ou si vous souhaitez avoir votre propre serveur de mise en cache, Vercel vous aide à créer votre propre serveur de mise en cache à distance et il est ouvert. implémentations sources du serveur de mise en cache déjà.
+
+Pour la possibilité d'intégration gratuite avec les serveurs Vercel qui permet d'amortir les coûts, je trouve que la meilleure solution est celle de Turborepo.
+Sourtout, si vous utilisez Vercel ou si vous souhaitez un outil monorepo moderne avec beaucoup de potentiel futur.
 
 **Test**
 
-TDD comprend 4 phases : analyse, conception, développement et tests. En d’autres termes, cela signifie comprendre le domaine du problème et l’analyser, concevoir une application pour résoudre le problème, la développer et la tester. 
-Pour être clair, TDD ne signifie pas seulement créer des tests unitaires, c'est un terme qui fait référence à l'ensemble du processus de développement.
+TDD comprend 4 phases : analyse, conception, développement et tests. En d’autres termes, cela signifie comprendre le domaine du problème et l’analyser, concevoir une application pour résoudre le problème, la développer et la tester.
 
 Il est nécessaire de rédiger les textes avant de mettre en œuvre la fonction. Si la fonction existe avant l'écriture du test, nous ne parlons pas de TDD, il s'agit simplement d'un test.
 
