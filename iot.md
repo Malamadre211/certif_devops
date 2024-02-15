@@ -32,7 +32,7 @@
 
 2. **Workflow de développement amélioré :**
    - Mise en place de branches feature avec des pull requests pour les validations.
-   - Utilisation de **GitLab CI** pour l'intégration continue, automatisant les tests et les déploiements.
+   - Utilisation de **GitHub CI** pour l'intégration continue, automatisant les tests et les déploiements.
 
 3. **Qualité du code et homogénéité :**
    - Mise en place d'un fichier de configuration **ESLint** pour maintenir la cohérence du code Javascript/Typescript.
